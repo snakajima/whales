@@ -58,10 +58,16 @@ Proposed power system:
 - Validate thermal behavior and charging through the final enclosure.
 
 ## Enclosure
-- Smartphone footprint, thicker body, **3D-printed PETG** (Bambu Lab A1).
-- Permanently sealed; no routine opening required.
+- Compact, smartphone-like **3D-printed PETG** body (Bambu Lab A1).
+- **Revised size target for module-based first prototype: 130 × 75 × 30 mm external** (provisional, not a verified fit).
+- **Longer-term custom-PCB size target: 110 × 65 × 25 mm external** (aspirational, not a validated packaging design).
+- Supersedes the initial oversized 190 × 110 × 40 mm concept (~836 cm³). The new prototype envelope is ~293 cm³, about 65% smaller in external volume.
+- Approximate assumed footprints, **not confirmed component dimensions**: ESP32 dev board 55 × 28 mm; ADC breakout 30 × 25 mm; Qi coil 40 × 40 mm; 2,000 mAh LiPo 60 × 35 × 8 mm; microSD module 25 × 20 mm. Two-layer placement may be needed.
+- Proposed layout: hydrophone cable gland on a short side, magnetic slider on a long side, Qi coil adjacent to the bottom wall.
+- **Revised: removable, repairable lid** with a continuous, seamless off-the-shelf silicone O-ring in a perimeter groove, compressed by approximately 6–8 screws (initial concept). This supersedes the earlier permanently bonded-lid proposal.
 - Candidate structural walls ~3 mm; locally ~1.5–2 mm at Qi charging window, subject to mechanical and charging tests.
-- Candidate bonded tongue-and-groove lid seam. Validate adhesive compatibility with PETG and saltwater.
+- Design the groove around a purchasable standard O-ring rather than joining silicone cord. Initial concept: 2 mm cross-section, Shore A ~50, approximately 20–25% compression; final groove width, depth, radius, stretch and screw placement require gland-design calculations and physical testing.
+- Place screws outside the wet seal boundary where practical, with hard compression stops and smooth gasket contact surfaces. Repairability and gasket replacement are required.
 - FDM prints may leak through layer boundaries; use suitable sealing methods and immersion testing.
 - Reuse proven **1/4-inch NPT IP68 nylon cable gland** for hydrophone cable and strain relief.
 - Design for accidental submersion, saltwater exposure, corrosion, battery temperature and preferably positive buoyancy.
@@ -98,4 +104,6 @@ Earlier rough budget: **$50–90** for audio/logic prototype, **$75–130** for 
 - Final ADC/breakout and analog PIP circuit values.
 - Battery sizing from measured current.
 - Charging safety in sealed case and robust Hall sensor switching.
+- Confirm actual board/battery/coil dimensions and fit in the 130 × 75 × 30 mm envelope, including cable gland, antenna clearance, fasteners and gasket groove.
+- Select a commercially available seamless O-ring, then calculate the actual rounded-rectangle gland perimeter and compression; check for corner distortion and excessive stretch.
 - Board mounting, flotation and saltwater durability.
