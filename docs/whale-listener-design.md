@@ -1,6 +1,8 @@
 # Whale Listener — Hardware Design Notes
 
-Updated: 2026-11-03  
+Updated: 2026-11-03
+
+**Mechanical Rev A:** [enclosure design and validation plan](enclosure-rev-a.md) · [parametric OpenSCAD](../cad/whale_enclosure.scad). The current preferred seal is a **flat, seamless silicone-sheet gasket**, replacing the earlier O-ring-groove concept. The CAD is preliminary and not a verified component fit.  
 Status: working off-the-shelf prototype; custom-electronics design proposed (not yet validated).
 
 ## Purpose
@@ -64,9 +66,9 @@ Proposed power system:
 - Supersedes the initial oversized 190 × 110 × 40 mm concept (~836 cm³). The new prototype envelope is ~293 cm³, about 65% smaller in external volume.
 - Approximate assumed footprints, **not confirmed component dimensions**: ESP32 dev board 55 × 28 mm; ADC breakout 30 × 25 mm; Qi coil 40 × 40 mm; 2,000 mAh LiPo 60 × 35 × 8 mm; microSD module 25 × 20 mm. Two-layer placement may be needed.
 - Proposed layout: hydrophone cable gland on a short side, magnetic slider on a long side, Qi coil adjacent to the bottom wall.
-- **Revised: removable, repairable lid** with a continuous, seamless off-the-shelf silicone O-ring in a perimeter groove, compressed by approximately 6–8 screws (initial concept). This supersedes the earlier permanently bonded-lid proposal.
+- **Revised again: removable, repairable lid** with a one-piece silicone-sheet frame gasket compressed between flat PETG faces by 8 screws. No O-ring groove; this supersedes both the permanently bonded lid and the prior O-ring concept.
 - Candidate structural walls ~3 mm; locally ~1.5–2 mm at Qi charging window, subject to mechanical and charging tests.
-- Design the groove around a purchasable standard O-ring rather than joining silicone cord. Initial concept: 2 mm cross-section, Shore A ~50, approximately 20–25% compression; final groove width, depth, radius, stretch and screw placement require gland-design calculations and physical testing.
+- Cut a seamless flat gasket from approximately 1.5 mm solid silicone sheet (Shore A 40–50 candidate). Target compression ~20% only as an initial test assumption; design stops and verify actual sealing pressure.
 - Place screws outside the wet seal boundary where practical, with hard compression stops and smooth gasket contact surfaces. Repairability and gasket replacement are required.
 - FDM prints may leak through layer boundaries; use suitable sealing methods and immersion testing.
 - Reuse proven **1/4-inch NPT IP68 nylon cable gland** for hydrophone cable and strain relief.
@@ -105,5 +107,5 @@ Earlier rough budget: **$50–90** for audio/logic prototype, **$75–130** for 
 - Battery sizing from measured current.
 - Charging safety in sealed case and robust Hall sensor switching.
 - Confirm actual board/battery/coil dimensions and fit in the 130 × 75 × 30 mm envelope, including cable gland, antenna clearance, fasteners and gasket groove.
-- Select a commercially available seamless O-ring, then calculate the actual rounded-rectangle gland perimeter and compression; check for corner distortion and excessive stretch.
+- Verify the silicone-sheet gasket profile, flatness, uniform compression and compression-stop design; see mechanical Rev A.
 - Board mounting, flotation and saltwater durability.
